@@ -5,8 +5,8 @@ const unavailable = (): never => { throw new ApiRequestError('Demo dataset is no
 export const mockApi = {
   health: async (): Promise<HealthResponse> => unavailable(),
   getPatients: async (): Promise<PatientsResponse> => unavailable(),
-  getPatient: async (_id: string): Promise<PatientReport> => unavailable(),
+  getPatient: async (id: string): Promise<PatientReport> => { void id; return unavailable(); },
   getMetrics: async (): Promise<Metrics> => unavailable(),
-  getExplanation: async (_id: string): Promise<ExplanationResponse> => unavailable(),
-  analyze: async (_input: AnalyzeRequest): Promise<AnalyzeResponse> => unavailable(),
+  getExplanation: async (id: string): Promise<ExplanationResponse> => { void id; return unavailable(); },
+  analyze: async (input: AnalyzeRequest): Promise<AnalyzeResponse> => { void input; return unavailable(); },
 };
