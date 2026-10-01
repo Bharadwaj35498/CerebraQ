@@ -1,0 +1,13 @@
+@import '@fontsource/sora/400.css';
+@import '@fontsource/sora/600.css';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { color-scheme: dark; --background: 218 44% 5%; --surface: 217 42% 9%; --elevated: 217 42% 13%; --border: 215 38% 18%; --foreground: 216 54% 94%; --muted: 216 24% 62%; --classical: 172 66% 50%; --quantum: 258 90% 77%; --warning: 38 92% 50%; --danger: 0 91% 72%; --success: 158 64% 52%; }
+:root.light { color-scheme: light; --background: 210 33% 97%; --surface: 0 0% 100%; --elevated: 210 26% 94%; --border: 214 24% 79%; --foreground: 218 38% 12%; --muted: 215 20% 35%; --classical: 174 88% 25%; --quantum: 258 57% 44%; --warning: 32 90% 33%; --danger: 0 68% 38%; --success: 158 76% 28%; }
+html { font-family: 'IBM Plex Sans', sans-serif; } body { margin: 0; min-width: 320px; } * { box-sizing: border-box; } button, input, select { font: inherit; } button { cursor: pointer; } a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid hsl(var(--classical)); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+@media print { :root { color-scheme: light; } body { background: white !important; color: black !important; } aside, header, nav, button, .print-hide { display: none !important; } main { padding: 0 !important; max-width: none !important; } .report-sheet { background: white !important; color: black !important; border: 0 !important; } }
