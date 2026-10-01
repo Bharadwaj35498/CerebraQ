@@ -1,0 +1,13 @@
+import { ResearchBadge } from '../components/common/ResearchStates';
+const sections = [
+  ['Research objective', 'Investigate a hybrid quantum–classical framework for patient-level HGG/LGG research-model predictions from multimodal brain MRI.'],
+  ['MRI modalities', 'T1 Native, T1 Contrast (T1ce), T2 Weighted and FLAIR.'],
+  ['Architecture', 'Preprocessing → tumour ROI → classical CNN feature extraction → quantum feature processing → hybrid classifier → explainability and patient-level reporting.'],
+  ['Classical branch', 'A CNN extracts features from prepared MRI regions.'],
+  ['Quantum branch', 'Amplitude encoding, Hadamard operations, parameterized RY rotations, CZ entanglement, QFT and Pauli-Z expectation measurement. Circuit diagrams are symbolic; execution is simulator-based, not quantum hardware.'],
+  ['Explainability', 'Grad-CAM records model-influence metadata. Saliency does not prove pathology or causal mechanisms. Image bytes are not exposed by the current Flask API.'],
+  ['Dataset information', 'The current labelled subset contains 285 patient-level cases. Training: 147 HGG and 52 LGG; validation: 32 HGG and 11 LGG; held-out test: 31 HGG and 12 LGG (43 patients). The broader BraTS-GLI training dataset contains 1,251 patient folders, but HGG/LGG labels are not available for all of them.'],
+  ['Evaluation approach', 'Accuracy, precision, recall and F1 for the classical baseline, full model and three ablations are provided by the existing Flask metrics API. Results apply to this experimental split, not all BraTS-GLI folders.'],
+  ['Limitations and ethical use', 'Research prototype only. Limited labelled subset, one experimental split, simulator-based quantum execution, no clinical validation and no claim of hardware execution. It is not a diagnostic device or a substitute for professional interpretation. Do not upload identifiable patient data.'],
+] as const;
+export default function About() { return <div className="max-w-4xl space-y-7"><header><ResearchBadge/><h1 className="mt-3 font-heading text-2xl">About CerebraQ</h1><p className="mt-2 text-sm text-muted">An Explainable Hybrid Quantum–Classical Framework for Brain MRI Analysis.</p></header>{sections.map(([title, content]) => <section key={title} className="border-b border-border pb-5"><h2 className="font-heading text-lg">{title}</h2><p className="mt-2 text-sm leading-7 text-muted">{content}</p></section>)}<section><h2 className="font-heading text-lg">Project and contributors</h2><p className="mt-2 text-sm text-muted">Contributor details: Not available. Repository: <a className="text-classical underline" href="https://github.com/Bharadwaj35498/CerebraQ" target="_blank" rel="noopener noreferrer">CerebraQ on GitHub</a>.</p></section></div>; }
