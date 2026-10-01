@@ -1,0 +1,40 @@
+{
+  "name": "cerebraq-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "@tanstack/react-query": "^5.83.0",
+    "react-dropzone": "^14.3.8",
+    "recharts": "^2.15.4",
+    "lucide-react": "^0.468.0",
+    "@fontsource/sora": "^5.2.6",
+    "@fontsource/ibm-plex-sans": "^5.2.6",
+    "@fontsource/jetbrains-mono": "^5.2.6",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.6.0",
+    "class-variance-authority": "^0.7.1",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-dialog": "^1.1.6"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.9.3",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@types/node": "^22.18.6",
+    "tailwindcss": "^3.4.17",
+    "postcss": "^8.5.6",
+    "autoprefixer": "^10.4.21"
+  }
+}
