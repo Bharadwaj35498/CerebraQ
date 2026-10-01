@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+data/raw/*
+data/processed/*
+data/interim/*
+reports/*.png
+reports/*.jpg
+reports/*.nii*
+*.pt
+*.pth
+*.ckpt

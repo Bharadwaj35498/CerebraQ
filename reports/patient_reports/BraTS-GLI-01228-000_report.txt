@@ -1,0 +1,95 @@
+============================================================
+CEREBRAQ PATIENT ANALYSIS REPORT
+============================================================
+
+Project:
+CerebraQ - Explainable Hybrid Quantum-Classical
+Framework for Brain MRI Analysis
+
+Patient ID:
+BraTS-GLI-01228-000
+
+============================================================
+MODEL PREDICTION
+============================================================
+
+Predicted Class:
+HGG
+
+HGG Probability:
+94.04%
+
+Model Confidence:
+94.04%
+
+Ground Truth:
+HGG
+
+============================================================
+MRI INPUT
+============================================================
+
+Modalities:
+- T1 Native
+- T1 Contrast
+- T2 Weighted
+- FLAIR
+
+============================================================
+TUMOUR ROI
+============================================================
+
+Tumour Pixels:
+1511
+
+ROI Pixels:
+4096
+
+Tumour Pixel Fraction:
+36.89%
+
+============================================================
+EXPLAINABILITY
+============================================================
+
+Method:
+Grad-CAM
+
+Target Layer:
+Final convolutional layer
+
+Mean Grad-CAM Activation:
+0.2298
+
+Maximum Grad-CAM Activation:
+0.9999
+
+Explanation Visualization:
+C:\Users\strom\Downloads\CerebraQ_complete_project\CerebraQ\reports\explainability\BraTS-GLI-01228-000_explainability.png
+
+============================================================
+SYSTEM INTERPRETATION
+============================================================
+
+The CerebraQ model produced an HGG
+prediction for this patient.
+
+The Grad-CAM visualization identifies image regions
+associated with the model's prediction.
+
+This visualization describes model behaviour and should
+not be interpreted as proof of medical causality.
+
+============================================================
+IMPORTANT NOTE
+============================================================
+
+CerebraQ is a research prototype.
+
+The model output is not a clinical diagnosis and is
+not intended to replace professional medical interpretation.
+
+============================================================
+Generated:
+2026-10-01 16:01:41
+============================================================

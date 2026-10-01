@@ -1,0 +1,35 @@
+{
+    "project": "CerebraQ",
+    "project_description": "Explainable Hybrid Quantum-Classical Framework for Brain MRI Analysis",
+    "patient_id": "BraTS-GLI-01228-000",
+    "analysis_type": "Research prototype model analysis",
+    "model_prediction": {
+        "class": "HGG",
+        "hgg_probability": 0.940358,
+        "model_confidence": 0.940358
+    },
+    "ground_truth": {
+        "class": "HGG",
+        "available": true
+    },
+    "mri_modalities": [
+        "T1 Native",
+        "T1 Contrast",
+        "T2 Weighted",
+        "FLAIR"
+    ],
+    "tumor_roi": {
+        "tumor_pixels": 1511,
+        "roi_pixels": 4096,
+        "tumor_fraction": 0.368896
+    },
+    "explainability": {
+        "method": "Grad-CAM",
+        "target_layer": "Final convolutional layer",
+        "mean_activation": 0.22978,
+        "maximum_activation": 0.999948,
+        "visualization": "C:\\Users\\strom\\Downloads\\CerebraQ_complete_project\\CerebraQ\\reports\\explainability\\BraTS-GLI-01228-000_explainability.png"
+    },
+    "system_note": "This output is a research-model prediction and is not a clinical diagnosis or a replacement for professional medical interpretation.",
+    "generated_at": "2026-10-01T16:01:41.455961"
+}
