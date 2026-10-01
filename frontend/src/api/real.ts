@@ -1,9 +1,7 @@
 import type { AnalyzeRequest, AnalyzeResponse, ExplanationResponse, HealthResponse, Metrics, PatientReport, PatientsResponse } from '../types/api';
-
 export class ApiRequestError extends Error {
   constructor(message: string, public readonly code: 'http' | 'network' | 'invalid_response' | 'unavailable', public readonly status?: number) { super(message); this.name = 'ApiRequestError'; }
 }
-
 const base = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/+$/, '');
 async function request(path: string): Promise<unknown> {
   let response: Response;
@@ -46,5 +44,5 @@ export const realApi = {
   getPatient: async (id: string) => parsePatient(await request(`/api/patient/${encodeURIComponent(id)}`)),
   getMetrics: async () => parseMetrics(await request('/api/metrics')),
   getExplanation: async (id: string) => parseExplanation(await request(`/api/explanation/${encodeURIComponent(id)}`)),
-  analyze: async (_input: AnalyzeRequest): Promise<AnalyzeResponse> => { throw new ApiRequestError('Analysis upload is not available: the current Flask backend has no analysis endpoint.', 'unavailable'); },
+  analyze: async (input: AnalyzeRequest): Promise<AnalyzeResponse> => { void input; throw new ApiRequestError('Analysis upload is not available: the current Flask backend has no analysis endpoint.', 'unavailable'); },
 };
